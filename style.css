@@ -1,0 +1,27 @@
+body{
+   padding: 0;
+   margin: 0;
+}
+button{
+   border-style: none;
+   cursor: pointer;
+}
+
+.container{
+   width: 100vw;
+   height: 100vh;
+   display:  flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.play {
+   width: 50%;
+   height: 50%;
+   /* border-style: none; */
+}
+
+/* #icon{
+   width: 300px;
+   height: 300px;
+} */
