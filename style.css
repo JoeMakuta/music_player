@@ -1,24 +1,152 @@
-body{
-   padding: 0;
-   margin: 0;
-}
-button{
-   height: 20vw;
-   width: 20vw;
-   border-radius: 100%;
-   border-color: #000;
-   padding: 40px;
-   cursor: pointer;
-   background: none;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;800&display=swap');
+
+:root{
+  --orange : rgb(255, 255, 255);
+  --black : rgb(0, 0, 0);
+  --white : #fff;
 }
 
-.container{
-   width: 100vw;
-   height: 100vh;
-   display:  flex;
-   justify-content: center;
-   align-items: center;
-   gap: 10vw;
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+p{
+  font-size: 14px;
+  text-align: center;
+}
+/* button {
+  height: 20vw;
+  width: 20vw;
+  border-radius: 100%;
+  border-color: #000;
+  padding: 40px;
+  cursor: pointer;
+  background: none;
+} */
+
+ion-icon {
+  font-size: 20px;
+  color: var(--orange)
+}
+
+.love_music{
+  display: flex;
+  justify-content: space-between;
+}
+
+.upper_body{
+  display: flex;
+  flex-direction: column;
+  gap: 5vw;
+}
+
+.header_menu{
+  display: flex;
+  justify-content: space-between;
+  align-items:  center;
+  width: 90vw;
+}
+
+.left_header{
+  display: flex;
+  gap: 5vw;
+}
+
+.music_image{
+  width: 90vw;
+  height: 90vw;
+  background: rgb(77, 77, 77);
+}
+
+/* Play button */
+
+.play_button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border-style: none;
+  background-color: rgb(59, 59, 59);
+}
+
+#play_icon{
+  color: rgb(255, 255, 255);
+  width: 20px;
+}
+
+
+.music_name{
+  color: white;
+}
+.music_name p{
+  font-weight: bold;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5vw;
+  padding: 20px;
+  box-sizing: border-box;
+  background: var(--black);
+}
+
+/* Music progress  */
+
+.progress-container {
+  width: 90vw;
+  height: 2px;
+  background: rgb(130, 130, 130);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.progress {
+  width: 2vw;
+  height: 2px;
+  background: rgb(197, 30, 30);
+  border-radius: 5px;
+}
+
+.progress-round{
+   width: 10px;
+   height: 10px;
+   background: rgb(197, 30, 30);
+   border-radius: 50%;
+}
+
+/* music_controller */
+.music_controller{
+  display:  flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5vw;
+  width: 90vw;
+}
+
+/* timer */
+.timer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  width: 90vw;
+}
+
+.timer p{
+  font-size: 10px;
+} 
+
+#audio{
+   width: 80vw;
 }
 
 /* #icon{
