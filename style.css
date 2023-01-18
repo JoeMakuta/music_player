@@ -66,18 +66,24 @@ ion-icon {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
+  border-style: none;
+  background-color: rgb(59, 59, 59);
 }
 
 #play_icon{
-  color: var(--black)
+  color: rgb(255, 255, 255);
+  width: 20px;
 }
 
 
 .music_name{
   color: white;
+}
+.music_name p{
+  font-weight: bold;
 }
 
 .container {
@@ -123,7 +129,21 @@ ion-icon {
   justify-content: space-between;
   align-items: center;
   gap: 5vw;
+  width: 90vw;
 }
+
+/* timer */
+.timer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  width: 90vw;
+}
+
+.timer p{
+  font-size: 10px;
+} 
 
 #audio{
    width: 80vw;
