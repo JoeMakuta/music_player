@@ -1,7 +1,16 @@
 const audio = document.getElementById("audio");
 const playButton = document.querySelector(".play_button");
-const music = "Jenn_Johnson,_You're_Gonna_Be_ok_(Lyric_Video)(128k)";
 const play_icon = document.getElementById("play_icon");
+const nextButton = document.getElementById("next");
+const prevButton = document.getElementById("prev");
+const title = document.getElementById("title");
+
+const musics = [
+  "Jenn_Johnson,_You're_Gonna_Be_ok_(Lyric_Video)(128k)",
+  "Elton_John_-_Sacrifice(128k)",
+];
+
+let playingIndex = 0;
 
 const playSong = () => {
   audio.play();
@@ -20,6 +29,7 @@ const pauseSong = () => {
 const loadSong = (song) => {
   audio.src = `music/${song}.mp3`;
   audio.controls = false;
+  title.innerHTML = song;
 };
 
 playButton.addEventListener("click", () => {
@@ -30,9 +40,15 @@ playButton.addEventListener("click", () => {
   }
 });
 
-// pauseButton.addEventListener("click", () => {
-//    pauseSong();
-//  });
+nextButton.addEventListener("click", () => {
+  playingIndex++;
+  loadSong(musics[playingIndex]);
+});
 
-loadSong(music);
+prevButton.addEventListener("click", () => {
+  playingIndex--;
+  loadSong(musics[playingIndex]);
+});
+
+loadSong(musics[playingIndex]);
 console.log(audio);
