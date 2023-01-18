@@ -13,6 +13,7 @@ const pauseSong = () => {
 
 const loadSong = (song) => {
   audio.src = `music/${song}.mp3`;
+  audio.controls = false
 };
 
 playButton.addEventListener("click", () => {
@@ -24,3 +25,4 @@ pauseButton.addEventListener("click", () => {
  });
 
 loadSong(music);
+console.log(audio);
