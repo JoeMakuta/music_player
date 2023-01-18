@@ -57,7 +57,12 @@ ion-icon {
 .music_image{
   width: 90vw;
   height: 90vw;
+  border-radius: 50%;
   background: rgb(77, 77, 77);
+  overflow: hidden;
+}
+.music_image img{
+  width: 100%;
 }
 
 /* Play button */
