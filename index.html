@@ -11,16 +11,36 @@
 
 <body>
    <div class=" container ">
-      <div class="header_menu">
-         <ion-icon name="menu-outline"></ion-icon>
-         <div>
-            <ion-icon name="bookmarks-outline"></ion-icon>
-            <ion-icon name="podium"></ion-icon>
-            <ion-icon name="timer"></ion-icon>
+      <div class=" upper_body ">
+         <div class="header_menu">
+            <ion-icon name="menu-outline"></ion-icon>
+            <div class=" left_header ">
+               <ion-icon name="bookmarks-outline"></ion-icon>
+               <ion-icon name="podium"></ion-icon>
+               <ion-icon name="timer"></ion-icon>
+            </div>
+         </div>
+         <div class="music_image">
+            <img src="" alt="">
          </div>
       </div>
-      <div>
-         <ion-icon name="play" size="large"></ion-icon>
+
+      <div class=" music_name ">
+         <p>Jenn_Johnson,_You're_Gonna_Be_ok_(Lyric_Video)(128k).mp3</p>
+         <div class=" love_music ">
+            <ion-icon name="heart-outline"></ion-icon>
+            <ion-icon name="ellipsis-horizontal"></ion-icon>
+         </div>
+      </div>
+
+      <div class=" music_controller " >
+         <ion-icon name="shuffle"></ion-icon>
+         <ion-icon name="play-skip-back"></ion-icon>
+         <button class=" play_button ">
+            <ion-icon name="play" size="large" id="play_icon"></ion-icon>
+         </button>
+         <ion-icon name="play-skip-forward"></ion-icon>
+         <ion-icon name="repeat"></ion-icon>
       </div>
       <div class=" progress-container ">
          <div class="progress"></div>
