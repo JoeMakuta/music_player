@@ -12,6 +12,8 @@ const musics = [
 
 let playingIndex = 0;
 
+//FUNCTIONS
+
 const playSong = () => {
   audio.play();
   playButton.classList.add("playing");
@@ -30,7 +32,11 @@ const loadSong = (song) => {
   audio.src = `music/${song}.mp3`;
   audio.controls = false;
   title.innerHTML = song;
+  audio.autoplay = true;
+  play_icon.setAttribute("name", "pause");
 };
+
+//EVENT LISTENERS
 
 playButton.addEventListener("click", () => {
   if (audio.paused) {
@@ -49,6 +55,8 @@ prevButton.addEventListener("click", () => {
   playingIndex--;
   loadSong(musics[playingIndex]);
 });
+
+//APPLICATION
 
 loadSong(musics[playingIndex]);
 console.log(audio);
