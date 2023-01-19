@@ -32,8 +32,23 @@ const loadSong = (song) => {
   audio.src = `music/${song}.mp3`;
   audio.controls = false;
   title.innerHTML = song;
-  audio.autoplay = true;
   play_icon.setAttribute("name", "pause");
+};
+
+const lastSong = () => {
+  if (playingIndex === musics.length - 1) {
+    playingIndex = 0;
+  } else {
+    playingIndex++;
+  }
+};
+
+const firstSong = () => {
+  if (playingIndex === 0) {
+    playingIndex = musics.length - 1;
+  } else {
+    playingIndex--;
+  }
 };
 
 //EVENT LISTENERS
@@ -47,12 +62,12 @@ playButton.addEventListener("click", () => {
 });
 
 nextButton.addEventListener("click", () => {
-  playingIndex++;
+  lastSong();
   loadSong(musics[playingIndex]);
 });
 
 prevButton.addEventListener("click", () => {
-  playingIndex--;
+  firstSong();
   loadSong(musics[playingIndex]);
 });
 
