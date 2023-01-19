@@ -31,6 +31,7 @@ const pauseSong = () => {
 const loadSong = (song) => {
   audio.src = `music/${song}.mp3`;
   audio.controls = false;
+  audio.autoplay = true;
   title.innerHTML = song;
   play_icon.setAttribute("name", "pause");
 };
