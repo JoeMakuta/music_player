@@ -170,6 +170,12 @@ ion-icon {
    width: 80vw;
 }
 
+/* LoopBack button */
+.loopBackColor{
+  color: orange;
+}
+
+
 /* #icon{
    width: 300px;
    height: 300px;

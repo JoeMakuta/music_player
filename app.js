@@ -4,6 +4,7 @@ const play_icon = document.getElementById("play_icon");
 const nextButton = document.getElementById("next");
 const prevButton = document.getElementById("prev");
 const title = document.getElementById("title");
+const loopBack = document.querySelector('.loopBack')
 
 const musics = [
   "Jenn_Johnson,_You're_Gonna_Be_ok_(Lyric_Video)(128k)",
@@ -31,9 +32,25 @@ const pauseSong = () => {
 const loadSong = (song) => {
   audio.src = `music/${song}.mp3`;
   audio.controls = false;
-  title.innerHTML = song;
   audio.autoplay = true;
+  title.innerHTML = song;
   play_icon.setAttribute("name", "pause");
+};
+
+const lastSong = () => {
+  if (playingIndex === musics.length - 1) {
+    playingIndex = 0;
+  } else {
+    playingIndex++;
+  }
+};
+
+const firstSong = () => {
+  if (playingIndex === 0) {
+    playingIndex = musics.length - 1;
+  } else {
+    playingIndex--;
+  }
 };
 
 //EVENT LISTENERS
@@ -47,14 +64,18 @@ playButton.addEventListener("click", () => {
 });
 
 nextButton.addEventListener("click", () => {
-  playingIndex++;
+  lastSong();
   loadSong(musics[playingIndex]);
 });
 
 prevButton.addEventListener("click", () => {
-  playingIndex--;
+  firstSong();
   loadSong(musics[playingIndex]);
 });
+
+loopBack.addEventListener('click', () => {
+  loopBack.classList.add('loopBackColor')
+})
 
 //APPLICATION
 
