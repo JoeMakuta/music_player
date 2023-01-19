@@ -4,6 +4,7 @@ const play_icon = document.getElementById("play_icon");
 const nextButton = document.getElementById("next");
 const prevButton = document.getElementById("prev");
 const title = document.getElementById("title");
+const loopBack = document.querySelector('.loopBack')
 
 const musics = [
   "Jenn_Johnson,_You're_Gonna_Be_ok_(Lyric_Video)(128k)",
@@ -71,6 +72,10 @@ prevButton.addEventListener("click", () => {
   firstSong();
   loadSong(musics[playingIndex]);
 });
+
+loopBack.addEventListener('click', () => {
+  loopBack.classList.add('loopBackColor')
+})
 
 //APPLICATION
 
