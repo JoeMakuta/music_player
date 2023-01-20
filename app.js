@@ -33,7 +33,7 @@ const loadSong = (song) => {
   audio.src = `music/${song}.mp3`;
   audio.controls = false;
   audio.autoplay = true;
-  title.innerHTML = song;
+  title.innerHTML = song + '.mp3';
   play_icon.setAttribute("name", "pause");
 };
 
@@ -81,3 +81,4 @@ loopBack.addEventListener('click', () => {
 
 loadSong(musics[playingIndex]);
 console.log(audio);
+
